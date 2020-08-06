@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 lxc init ubuntu/blkcapt "blkcaptdev" --vm
 for i in {1..3}; do 
