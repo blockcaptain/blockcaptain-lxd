@@ -1,4 +1,4 @@
-name: Build Images
+name: Build LXD Images
 
 on:
   workflow_dispatch:
