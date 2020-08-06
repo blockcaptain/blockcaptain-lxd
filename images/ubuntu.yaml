@@ -486,6 +486,12 @@ packages:
     - language-pack-en
     - openssh-client
     - vim
+    - gpg
+    - command-not-found
+    - openssh-server
+    - man-db
+    - git
+    - yadm
     action: install
 
   - packages:
