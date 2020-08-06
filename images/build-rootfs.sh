@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 mkdir "${RUNNER_TEMP}/build"
 mount -t tmpfs -o size=5G,nr_inodes=10000000 tmpfs "${RUNNER_TEMP}/build"

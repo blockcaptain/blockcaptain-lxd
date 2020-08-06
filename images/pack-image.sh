@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 cd "${RUNNER_TEMP}/build"
 distrobuilder pack-lxd "${GITHUB_WORKSPACE}/images/ubuntu.yaml" rootfs \
