@@ -6,6 +6,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-20.04
+    env:
+      SOURCE_URL: http://azure.archive.ubuntu.com/ubuntu
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
