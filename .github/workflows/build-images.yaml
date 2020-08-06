@@ -9,13 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: sudo images/install-dependencies.sh
+        run: sudo -E images/install-dependencies.sh
       - name: Build Rootfs
         env:
           RUNNER_TEMP: ${{ runner.temp }}
-        run: sudo images/build-rootfs.sh
+        run: sudo -E images/build-rootfs.sh
       - name: Pack Image
         env:
           RUNNER_TEMP: ${{ runner.temp }}
-        run: sudo images/pack-image.sh
+        run: sudo -E images/pack-image.sh
 
