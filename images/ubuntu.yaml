@@ -359,7 +359,7 @@ files:
   types:
   - container
   variants:
-  - default
+  - blkcapt
 
 - path: /etc/network/interfaces
   generator: dump
@@ -397,7 +397,7 @@ files:
   types:
   - vm
   variants:
-  - default
+  - blkcapt
 
 - path: /etc/network/interfaces
   generator: dump
@@ -473,7 +473,7 @@ files:
     # User rules for ubuntu
     ubuntu ALL=(ALL) NOPASSWD:ALL
   variants:
-    - default
+    - blkcapt
 
 packages:
   manager: apt
@@ -590,7 +590,7 @@ actions:
     getent group sudo >/dev/null 2>&1 || groupadd --system sudo
     useradd --create-home -s /bin/bash -G sudo -U ubuntu
   variants:
-  - default
+  - blkcapt
 
 - trigger: post-packages
   action: |-
