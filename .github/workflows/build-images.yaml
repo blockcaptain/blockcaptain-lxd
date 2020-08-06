@@ -1,6 +1,8 @@
 name: Build LXD Images
 
 on:
+  push:
+    branches: [master]
   workflow_dispatch:
 
 jobs:
