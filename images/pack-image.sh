@@ -8,7 +8,7 @@ distrobuilder pack-lxd "${GITHUB_WORKSPACE}/images/ubuntu.yaml" rootfs \
     -o image.architecture=amd64 \
     -o image.release=focal \
     -o image.variant=blkcapt \
-    -o source.url=http://us.archive.ubuntu.com/ubuntu
+    -o source.url="${SOURCE_URL}"
 
 rm -rf "rootfs"
 ls -la .

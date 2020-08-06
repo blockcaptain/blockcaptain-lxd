@@ -10,4 +10,4 @@ distrobuilder --timeout 1500 build-dir "${GITHUB_WORKSPACE}/images/ubuntu.yaml" 
     -o image.architecture=amd64 \
     -o image.release=focal \
     -o image.variant=blkcapt \
-    -o source.url=http://us.archive.ubuntu.com/ubuntu
+    -o source.url="${SOURCE_URL}"
