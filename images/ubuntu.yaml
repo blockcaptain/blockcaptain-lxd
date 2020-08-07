@@ -492,6 +492,7 @@ packages:
     - man-db
     - git
     - yadm
+    - rsync
     action: install
 
   - packages:
