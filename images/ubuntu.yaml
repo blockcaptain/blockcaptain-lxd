@@ -493,6 +493,7 @@ packages:
     - git
     - yadm
     - rsync
+    - btrfs-progs
     action: install
 
   - packages:
