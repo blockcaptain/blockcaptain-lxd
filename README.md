@@ -1,2 +1,3 @@
 # blockcaptain-lxd
-Testing and development environments for BlockCaptain in LXD.
+
+Testing and development LXD VM image for BlockCaptain.
