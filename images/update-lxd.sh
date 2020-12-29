@@ -13,6 +13,7 @@ JSON="{
                         {
                             \"name\": \"UrlFileName\",
                             \"parameters\": {
+                                \"@odata.type\": \"#Microsoft.Azure.Cdn.Models.DeliveryRuleHttpVersionConditionParameters\",
                                 \"operator\": \"Equal\",
                                 \"negateCondition\": false,
                                 \"matchValues\": [
@@ -26,6 +27,7 @@ JSON="{
                         {
                             \"name\": \"ModifyResponseHeader\",
                             \"parameters\": {
+                                \"@odata.type\": \"#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters\",
                                 \"headerAction\": \"Append\",
                                 \"headerName\": \"LXD-Image-Hash\",
                                 \"value\": \"${LXD_SHA}\"
@@ -34,6 +36,7 @@ JSON="{
                         {
                             \"name\": \"ModifyResponseHeader\",
                             \"parameters\": {
+                                \"@odata.type\": \"#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters\",
                                 \"headerAction\": \"Append\",
                                 \"headerName\": \"LXD-Image-URL\",
                                 \"value\": \"${LXD_URL}\"
@@ -49,4 +52,4 @@ JSON="{
 
 URI="${SECRET_CDN_ENDPOINT_RESOURCE_ID}?api-version=2020-04-15"
 
-az rest --method PATCH --uri "${URI}" --body "${JSON}" > /dev/null
+az rest --method PATCH --uri "${URI}" --body "${JSON}" &> /dev/null
