@@ -20,8 +20,12 @@ jobs:
         env:
           RUNNER_TEMP: ${{ runner.temp }}
         run: sudo -E images/pack-image.sh
+      - name: Unify Image
+        env:
+          RUNNER_TEMP: ${{ runner.temp }}
+        run: sudo -E images/unify-image.sh
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: ubuntu-vm
-          path: ${{ runner.temp }}/build/*
+          path: ${{ runner.temp }}/build/ubuntu-vm.tar
