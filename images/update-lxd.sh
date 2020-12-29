@@ -13,7 +13,7 @@ JSON="{
                         {
                             \"name\": \"UrlFileName\",
                             \"parameters\": {
-                                \"@odata.type\": \"#Microsoft.Azure.Cdn.Models.DeliveryRuleHttpVersionConditionParameters\",
+                                \"@odata.type\": \"#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFilenameConditionParameters\",
                                 \"operator\": \"Equal\",
                                 \"negateCondition\": false,
                                 \"matchValues\": [
@@ -52,4 +52,5 @@ JSON="{
 
 URI="${SECRET_CDN_ENDPOINT_RESOURCE_ID}?api-version=2020-04-15"
 
-az rest --method PATCH --uri "${URI}" --body "${JSON}" --debug
+echo "Calling Azure API..."
+az rest --method PATCH --uri "${URI}" --body "${JSON}" &> /dev/null
