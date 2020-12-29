@@ -52,4 +52,4 @@ JSON="{
 
 URI="${SECRET_CDN_ENDPOINT_RESOURCE_ID}?api-version=2020-04-15"
 
-az rest --method PATCH --uri "${URI}" --body "${JSON}" &> /dev/null
+az rest --method PATCH --uri "${URI}" --body "${JSON}" --debug
