@@ -17,5 +17,5 @@ fi
 ./ok.sh download_workflow_run_artifact "${REPO_OWNER}" "${REPO_NAME}" "${ARTIFACT_ID}" > ubuntu-vm.zip
 
 INFO=$(curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}")
-RELEASE=$(jq -r '.head_sha[0:12]+"-"+(.created_at | gsub("[-:]";""))' <<< $info)
+RELEASE=$(jq -r '.head_sha[0:12]+"-"+(.created_at | gsub("[-:]";""))' <<< $INFO)
 echo "::set-output name=release_name::$RELEASE"
