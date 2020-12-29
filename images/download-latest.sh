@@ -19,4 +19,6 @@ unzip ubuntu-vm.zip
 
 INFO=$(curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}")
 RELEASE=$(jq -r '.head_sha[0:12]+"-"+(.created_at | gsub("[-:]";""))' <<< $INFO)
+SHA=$(sha256sum ubuntu-vm.tar | cut -d ' ' -f 1)
 echo "::set-output name=release_name::$RELEASE"
+echo "::set-output name=lxd_sha::$SHA"
