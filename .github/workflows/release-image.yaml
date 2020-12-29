@@ -15,7 +15,7 @@ jobs:
       - name: Download Artifact
         id: download_artifact
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            RUN_ID: ${{ github.event.inputs.name }}
         run: images/download-latest.sh
       - name: Create Release
